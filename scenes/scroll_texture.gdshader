@@ -1,4 +1,5 @@
 shader_type canvas_item;
+// Thank you to alfroids for the outline shader (MIT license): https://godotshaders.com/shader/2d-circular-outline-shader/
 
 uniform float scroll_speed = 1.0;
 
