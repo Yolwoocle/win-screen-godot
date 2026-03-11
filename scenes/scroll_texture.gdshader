@@ -1,0 +1,66 @@
+shader_type canvas_item;
+
+uniform float scroll_speed = 1.0;
+
+uniform bool allow_out_of_bounds = true;
+uniform float outline_thickness: hint_range(0.0, 16.0, 1.0) = 1.0;
+uniform vec4 outline_color: source_color = vec4(1.0);
+
+bool is_inside_usquare(vec2 x) {
+	return x == clamp(x, vec2(0.0), vec2(1.0));
+}
+
+vec4 blend(vec4 bottom, vec4 top) {
+    float alpha = top.a + bottom.a * (1.0 - top.a);
+    if (alpha < 0.0001) return vec4(0.0);
+
+    vec3 color = mix(bottom.rgb * bottom.a, top.rgb, top.a) / alpha;
+    return vec4(color, alpha);
+}
+
+void vertex() {
+	if (allow_out_of_bounds) VERTEX += (UV * 2.0 - 1.0) * outline_thickness;
+}
+
+void fragment() {
+    vec2 moving_uv = vec2(fract(UV.x - (TIME) * scroll_speed), UV.y);
+    
+    vec4 in_tex = texture(TEXTURE, moving_uv);
+    COLOR = in_tex;
+    
+    if (outline_thickness > 0.0 && outline_color.a > 0.0) {
+        vec2 uv = moving_uv; 
+        vec4 texture_color = in_tex;
+
+        float alpha = 0.0;
+        for (float y = 1.0; y <= outline_thickness; y++) {
+            for (float x = 0.0; x <= y; x++) {
+                if (length(vec2(x, y - 0.5)) > outline_thickness) break;
+                
+                vec2 look_at_uv[8] = {
+                    uv + vec2(x, y) * TEXTURE_PIXEL_SIZE,
+                    uv + vec2(-x, y) * TEXTURE_PIXEL_SIZE,
+                    uv + vec2(x, -y) * TEXTURE_PIXEL_SIZE,
+                    uv + vec2(-x, -y) * TEXTURE_PIXEL_SIZE,
+                    uv + vec2(y, x) * TEXTURE_PIXEL_SIZE,
+                    uv + vec2(-y, x) * TEXTURE_PIXEL_SIZE,
+                    uv + vec2(y, -x) * TEXTURE_PIXEL_SIZE,
+                    uv + vec2(-y, -x) * TEXTURE_PIXEL_SIZE
+                };
+
+                for (int i = 0; i < 8; i++) {
+                    float look_at_alpha = texture(TEXTURE, fract(look_at_uv[i])).a;
+                    if (look_at_alpha > alpha) alpha = look_at_alpha;
+                }
+                if (alpha >= 1.0) break;
+            }
+            if (alpha >= 1.0) break;
+        }
+        COLOR = blend(vec4(outline_color.rgb, alpha * outline_color.a), texture_color);
+    }
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the material.
+//	// Uncomment to replace the default light processing function with this one.
+//}

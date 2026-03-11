@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dj76s8a448v6h"]
+
+[ext_resource type="Script" uid="uid://qaiukjx3qrmj" path="res://scenes/win_screen.gd" id="1_e41g7"]
+[ext_resource type="Texture2D" uid="uid://dk28h73yue46n" path="res://assets/finish_outlined.png" id="2_0lrm4"]
+[ext_resource type="Texture2D" uid="uid://cuhyh0rvxxrgp" path="res://assets/finish_filled.png" id="3_6s1kg"]
+[ext_resource type="Texture2D" uid="uid://j7l12pl5ukdp" path="res://assets/finish_small.png" id="4_bqn3h"]
+
+[node name="WinScreen" type="Control" unique_id=155209413 node_paths=PackedStringArray("big_text", "small_text_top", "small_text_bottom")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e41g7")
+big_text = NodePath("BigText")
+small_text_top = NodePath("FinishOutlined1")
+small_text_bottom = NodePath("FinishOutlined2")
+
+[node name="BigText" type="HBoxContainer" parent="." unique_id=1307334518]
+layout_mode = 0
+offset_left = -622.001
+offset_top = 430.5
+offset_right = 2542.001
+offset_bottom = 649.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+
+[node name="FinishOutlined1" type="TextureRect" parent="BigText" unique_id=1531366493]
+layout_mode = 2
+texture = ExtResource("2_0lrm4")
+
+[node name="FinishFilled" type="TextureRect" parent="BigText" unique_id=1437943404]
+layout_mode = 2
+texture = ExtResource("3_6s1kg")
+
+[node name="FinishOutlined2" type="TextureRect" parent="BigText" unique_id=1324062914]
+layout_mode = 2
+texture = ExtResource("2_0lrm4")
+
+[node name="FinishOutlined1" type="TextureRect" parent="." unique_id=1770410763]
+layout_mode = 0
+offset_left = -591.0
+offset_top = 649.5
+offset_right = 2511.0
+offset_bottom = 715.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlined2" type="TextureRect" parent="." unique_id=674102860]
+layout_mode = 0
+offset_left = -591.0
+offset_top = 364.5
+offset_right = 2511.0
+offset_bottom = 430.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1

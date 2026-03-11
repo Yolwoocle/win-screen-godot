@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://dj76s8a448v6h"]
+
+[ext_resource type="Script" uid="uid://qaiukjx3qrmj" path="res://scenes/win_screen.gd" id="1_e41g7"]
+[ext_resource type="Texture2D" uid="uid://dk28h73yue46n" path="res://assets/finish_outlined.png" id="2_0lrm4"]
+[ext_resource type="Texture2D" uid="uid://crxu5lkan3nn6" path="res://assets/boomerang_fu.jpg" id="2_6s1kg"]
+[ext_resource type="Texture2D" uid="uid://cuhyh0rvxxrgp" path="res://assets/finish_filled.png" id="3_6s1kg"]
+[ext_resource type="Shader" uid="uid://dqam8y8il7mkt" path="res://scenes/scroll_texture.gdshader" id="4_0lrm4"]
+[ext_resource type="Texture2D" uid="uid://j7l12pl5ukdp" path="res://assets/finish_small.png" id="4_bqn3h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a7mbc"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = 0.0
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 4.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0lrm4"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = 0.7321019044439552
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6s1kg"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = -0.9743653207855989
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bqn3h"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = 0.6107451334656637
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qnnn4"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = -0.9017377658009575
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_doie2"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = 0.5009296833758168
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_afixa"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = -0.5303036412780832
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r6ob7"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = 0.9283165435145477
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o8vhx"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = -0.7468893162008412
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0d7wf"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = 0.9778318662736303
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l756l"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = -0.932438173578073
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qr20w"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = 0.6931471774698067
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wtw0j"]
+shader = ExtResource("4_0lrm4")
+shader_parameter/scroll_speed = -0.978461726341693
+shader_parameter/allow_out_of_bounds = true
+shader_parameter/outline_thickness = 1.0
+shader_parameter/outline_color = Color(0.10980392, 0.105882354, 0.16078432, 1)
+
+[node name="WinScreen" type="Control" unique_id=155209413 node_paths=PackedStringArray("big_text", "small_texts_top", "small_texts_bottom")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e41g7")
+big_text = NodePath("BigText")
+small_texts_top = [NodePath("FinishOutlinedTop1"), NodePath("FinishOutlinedTop2"), NodePath("FinishOutlinedTop3"), NodePath("FinishOutlinedTop4"), NodePath("FinishOutlinedTop5"), NodePath("FinishOutlinedTop6")]
+small_texts_bottom = [NodePath("FinishOutlinedBottom1"), NodePath("FinishOutlinedBottom2"), NodePath("FinishOutlinedBottom3"), NodePath("FinishOutlinedBottom4"), NodePath("FinishOutlinedBottom5"), NodePath("FinishOutlinedBottom6")]
+anim_speed = 1.3
+
+[node name="BoomerangFu" type="Sprite2D" parent="." unique_id=1398757277]
+visible = false
+texture = ExtResource("2_6s1kg")
+centered = false
+
+[node name="BigText" type="HBoxContainer" parent="." unique_id=1307334518]
+layout_mode = 0
+offset_left = -3164.0024
+offset_top = 384.5
+offset_bottom = 695.5
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+
+[node name="FinishOutlined1" type="TextureRect" parent="BigText" unique_id=1531366493]
+material = SubResource("ShaderMaterial_a7mbc")
+layout_mode = 2
+texture = ExtResource("2_0lrm4")
+
+[node name="FinishFilled" type="TextureRect" parent="BigText" unique_id=1437943404]
+material = SubResource("ShaderMaterial_a7mbc")
+layout_mode = 2
+texture = ExtResource("3_6s1kg")
+
+[node name="FinishOutlined2" type="TextureRect" parent="BigText" unique_id=1324062914]
+material = SubResource("ShaderMaterial_a7mbc")
+layout_mode = 2
+texture = ExtResource("2_0lrm4")
+
+[node name="FinishOutlinedTop1" type="TextureRect" parent="." unique_id=1770410763]
+material = SubResource("ShaderMaterial_0lrm4")
+layout_mode = 0
+offset_left = 1933.2334
+offset_top = 318.5
+offset_right = 5035.2334
+offset_bottom = 384.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedTop2" type="TextureRect" parent="." unique_id=1680806779]
+material = SubResource("ShaderMaterial_6s1kg")
+layout_mode = 0
+offset_left = -3356.4924
+offset_top = 252.5
+offset_right = -254.49194
+offset_bottom = 318.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedTop3" type="TextureRect" parent="." unique_id=425233130]
+material = SubResource("ShaderMaterial_bqn3h")
+layout_mode = 0
+offset_left = 2160.4104
+offset_top = 186.5
+offset_right = 5262.41
+offset_bottom = 252.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedTop4" type="TextureRect" parent="." unique_id=1392296036]
+material = SubResource("ShaderMaterial_qnnn4")
+layout_mode = 0
+offset_left = -3239.573
+offset_top = 120.5
+offset_right = -137.573
+offset_bottom = 186.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedTop5" type="TextureRect" parent="." unique_id=924409774]
+material = SubResource("ShaderMaterial_doie2")
+layout_mode = 0
+offset_left = 2113.0566
+offset_top = 54.5
+offset_right = 5215.057
+offset_bottom = 120.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedTop6" type="TextureRect" parent="." unique_id=1358773528]
+material = SubResource("ShaderMaterial_afixa")
+layout_mode = 0
+offset_left = -3307.169
+offset_top = -11.5
+offset_right = -205.16895
+offset_bottom = 54.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedBottom1" type="TextureRect" parent="." unique_id=674102860]
+material = SubResource("ShaderMaterial_r6ob7")
+layout_mode = 0
+offset_left = 2189.7324
+offset_top = 695.5
+offset_right = 5291.7324
+offset_bottom = 761.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedBottom2" type="TextureRect" parent="." unique_id=1214826936]
+material = SubResource("ShaderMaterial_o8vhx")
+layout_mode = 0
+offset_left = -3209.717
+offset_top = 761.5
+offset_right = -107.71704
+offset_bottom = 827.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedBottom3" type="TextureRect" parent="." unique_id=883968958]
+material = SubResource("ShaderMaterial_0d7wf")
+layout_mode = 0
+offset_left = 2168.3457
+offset_top = 827.5
+offset_right = 5270.3457
+offset_bottom = 893.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedBottom4" type="TextureRect" parent="." unique_id=921514119]
+material = SubResource("ShaderMaterial_l756l")
+layout_mode = 0
+offset_left = -3323.5488
+offset_top = 893.5
+offset_right = -221.54883
+offset_bottom = 959.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedBottom5" type="TextureRect" parent="." unique_id=718146316]
+material = SubResource("ShaderMaterial_qr20w")
+layout_mode = 0
+offset_left = 2113.895
+offset_top = 959.5
+offset_right = 5215.895
+offset_bottom = 1025.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
+
+[node name="FinishOutlinedBottom6" type="TextureRect" parent="." unique_id=776606882]
+material = SubResource("ShaderMaterial_wtw0j")
+layout_mode = 0
+offset_left = -3371.7422
+offset_top = 1025.5
+offset_right = -269.7422
+offset_bottom = 1091.5
+texture = ExtResource("4_bqn3h")
+stretch_mode = 1
