@@ -2,7 +2,7 @@
 
 A small win-screen like effect in Godot. Written for Godot 4.6.1.  
 
-Just a word of warning, the code is not pretty as I did not aim to make it extendible or well-written. This repo is mainly there to share for learning purposes.  
+Just a word of warning, the code is not pretty as I did not aim to make it extendible or well-written. This repo is mainly there to share for learning purposes. If you wish to use this in a project, I recommend adapting it to your project's needs.
 
 **Showcase:**
 
